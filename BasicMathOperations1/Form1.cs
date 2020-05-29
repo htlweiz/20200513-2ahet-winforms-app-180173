@@ -137,5 +137,66 @@ namespace BasicMathOperations1
                 txtNumber1.SelectAll();
             }
         }
+
+        private void btnPotenz_Click(object sender, EventArgs e)
+        {
+            double number1, number2, result;
+            try
+            {
+                number1 = Convert.ToDouble(txtNumber1.Text);
+                number2 = Convert.ToDouble(txtNumber2.Text);
+                if ((number1 == 0) && (number2 <= 0))
+                {
+                    MessageBox.Show("Ergebnis nicht definiert!", "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    result = Math.Pow(number1, number2);
+                    lblResult.Text = Convert.ToString(result);
+                    lblResultType.Text = "Ergebnis";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblResultType.Text = "Fehler";
+                lblResult.Text = "Kein numerischer Wert!";
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+            
+            
+        }
+
+        private void btnWurzel_Click(object sender, EventArgs e)
+        {
+            int number1, number2;
+            double result;
+
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+
+                if (number1 == 0) throw new ArgumentException("Division durch Null");
+                else if (number2 < 0) throw new ArgumentException("Negativer Radikand");
+
+                result = Math.Pow(number2, ((double)1 / number1));
+                lblResult.Text = result.ToString("n12");
+                lblResultType.Text = "Wurzel";
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
     }
 }

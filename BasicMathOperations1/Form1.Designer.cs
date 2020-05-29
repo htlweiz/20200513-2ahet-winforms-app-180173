@@ -40,6 +40,8 @@
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnDivision = new System.Windows.Forms.Button();
+            this.btnWurzel = new System.Windows.Forms.Button();
+            this.btnPotenz = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -115,10 +117,10 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(416, 113);
+            this.btnAdd.Location = new System.Drawing.Point(416, 111);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(59, 50);
+            this.btnAdd.Size = new System.Drawing.Size(59, 52);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -139,9 +141,9 @@
             // btnMinus
             // 
             this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinus.Location = new System.Drawing.Point(481, 113);
+            this.btnMinus.Location = new System.Drawing.Point(481, 111);
             this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(56, 50);
+            this.btnMinus.Size = new System.Drawing.Size(56, 52);
             this.btnMinus.TabIndex = 9;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
@@ -169,12 +171,36 @@
             this.btnDivision.UseVisualStyleBackColor = true;
             this.btnDivision.Click += new System.EventHandler(this.btnDivision_Click);
             // 
+            // btnWurzel
+            // 
+            this.btnWurzel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWurzel.Location = new System.Drawing.Point(543, 111);
+            this.btnWurzel.Name = "btnWurzel";
+            this.btnWurzel.Size = new System.Drawing.Size(56, 52);
+            this.btnWurzel.TabIndex = 12;
+            this.btnWurzel.Text = "√";
+            this.btnWurzel.UseVisualStyleBackColor = true;
+            this.btnWurzel.Click += new System.EventHandler(this.btnWurzel_Click);
+            // 
+            // btnPotenz
+            // 
+            this.btnPotenz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPotenz.Location = new System.Drawing.Point(543, 168);
+            this.btnPotenz.Name = "btnPotenz";
+            this.btnPotenz.Size = new System.Drawing.Size(56, 56);
+            this.btnPotenz.TabIndex = 13;
+            this.btnPotenz.Text = "a^b";
+            this.btnPotenz.UseVisualStyleBackColor = true;
+            this.btnPotenz.Click += new System.EventHandler(this.btnPotenz_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(711, 360);
+            this.Controls.Add(this.btnPotenz);
+            this.Controls.Add(this.btnWurzel);
             this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnMinus);
@@ -189,7 +215,7 @@
             this.Controls.Add(this.lblTitle);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,6 +235,8 @@
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnDivision;
+        private System.Windows.Forms.Button btnWurzel;
+        private System.Windows.Forms.Button btnPotenz;
     }
 }
 
